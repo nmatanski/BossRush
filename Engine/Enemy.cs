@@ -10,6 +10,7 @@ namespace Engine
     {
         public Enemy(int id, string name, int maxHP, int currentHP) : base(id, name, maxHP, currentHP)
         {
+
         }
     }
 }

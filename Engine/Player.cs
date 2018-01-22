@@ -9,9 +9,12 @@ namespace Engine
     public class Player : Creature
     {
         public int Gold { get; set; }
-        public Player(int id, string name, int maxHP, int currentHP,int gold) : base(id, name, maxHP, currentHP)
+        public int Xp { get;}
+        
+        public int Level { get { return (int)Math.Floor (Xp / 100.0) + 1; } }
+        public Player(int id, string name, int maxHP, int currentHP,int gold,int xp) : base(id, name, maxHP, currentHP)
         {
-
+            Xp = xp;
             Gold = gold;
         }
 
