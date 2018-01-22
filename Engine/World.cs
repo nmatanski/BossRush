@@ -18,6 +18,8 @@ namespace Engine
         public const int ITEM_ID_SCIMITAR = 3;
         public const int ITEM_ID_DEMOLISHER = 4;
 
+        //Healings
+        public const int ITEM_ID_BANANA = 501;
 
         //Enemies
         public const int ENEMY_ID_CACTI = 2001;
@@ -26,15 +28,22 @@ namespace Engine
         public const int ENEMY_ID_TYPE_THREE = 2004;
 
 
-      private static void World()
+      static World()
         {
             PopulateItems();
-            PopulateEnemies();
+        PopulateEnemies();
         }
 
-       private static void PopulateItems
+       private static void PopulateItems()
             {
             Items.Add(new Weapon(ITEM_ID_BROKEN_SWORD,"Broken sword","Broken swords",0,5));
-            }
+            Items.Add(new Weapon(ITEM_ID_WOODEN_SWORD, "Wooden sword", "Wooden swords", 3, 9));
+            Items.Add(new HealingItem(ITEM_ID_BANANA, "Banana", "Bananas", "Heals 35 HP", 35));
+        }
+
+        private static void PopulateEnemies()
+        {
+            Enemies.Add(new Enemy(ENEMY_ID_CACTI, "Cacti", 1000, 1000,));
+        }
     }
 }
