@@ -32,9 +32,9 @@ namespace Engine
             PopulateEnemies();
         }
 
-        PopulateItems
+       private static void PopulateItems
             {
-            Items.Add(new Weapon(ITEM_ID_BROKEN_SWORD,"Broken sword","Broken swords",0,5))
+            Items.Add(new Weapon(ITEM_ID_BROKEN_SWORD,"Broken sword","Broken swords",0,5));
             }
     }
 }
