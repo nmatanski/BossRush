@@ -43,7 +43,15 @@ namespace Engine
 
         private static void PopulateEnemies()
         {
-            // Enemies.Add(new Enemy(ENEMY_ID_CACTI, "Cacti", 1000, 1000,)); // TODO: id, name, maxHP, currentHP, minDmg, maxDmg, rewardGold, rewardXP
+            // id, name, maxHP, currentHP, minDmg, maxDmg, rewardGold, rewardXP
+            Enemy cacti = new Enemy(ENEMY_ID_CACTI, "Cacti", 1000, 1000, 20, 100, 50, 50);
+            cacti.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BANANA), 100, true));
+            cacti.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOODEN_SWORD), 20, false));
+        }
+
+        public static Item ItemByID(int id)
+        {
+            return Items.FirstOrDefault(item => item.Id == id);
         }
     }
 }

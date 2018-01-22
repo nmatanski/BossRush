@@ -15,11 +15,5 @@ namespace BossRush.Modules
         {
             await ReplyAsync($"{Context.User.Mention} Pong! /{(Context.Client as DiscordSocketClient).Latency}ms :ping_pong:");
         }
-
-        [Command("hello")]
-        public async Task GreetAsync()
-        {
-            await ReplyAsync($"Greetings, {Context.User.Mention}. Long days and pleasant nights.");
-        }
     }
 }

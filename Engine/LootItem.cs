@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class LootItem : Item
+    public class LootItem
     {
         public Item Details { get; set; }
 
@@ -14,11 +14,11 @@ namespace Engine
 
         public bool IsDefaultItem { get; set; }
 
-        public LootItem(int id, string name, string pluralName, string itemDetails, int dropPercentage, bool isDefaultItem, Item details) : base(id, name, pluralName, itemDetails)
+        public LootItem(Item item, int dropPercentage, bool isDefaultItem)
         {
+            Details = item;
             DropPercentage = dropPercentage;
             IsDefaultItem = isDefaultItem;
-            Details = details;
         }
     }
 }

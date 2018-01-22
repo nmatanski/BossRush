@@ -29,7 +29,7 @@ namespace BossRush
 
             services = new ServiceCollection().AddSingleton(client).AddSingleton(commands).BuildServiceProvider();
             client.Log += Log;
-            String botToken = "NDA0NzI4NjU0NTIyODc1OTM0.DUaXdg.a7DgOBaFvETcl1IwZIAMMiwOYsE";
+            String botToken = "NDA0NjcyNTc2NjM2MzIxODAy.DUeLrA.Y883Cwi07JqniDcF1K-mdDoenno";
 
             await RegisterCommandsAsync();
 

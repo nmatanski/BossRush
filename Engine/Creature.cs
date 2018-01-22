@@ -27,7 +27,5 @@ namespace Engine
             MaxHP = maxHP;
             CurrentHP = currentHP;
         }
-
-
     }
 }
