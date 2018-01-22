@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-   public class LootItem:Item
+    public class LootItem : Item
     {
         public Item Details { get; set; }
-       public int DropPercentage { get; set; }
+
+        public int DropPercentage { get; set; }
+
         public bool IsDefaultItem { get; set; }
 
-        public LootItem(int id,string name,string pluralname,string itemdetails,int droppercentage,bool isdefaultitem,Item details):base(id,name,pluralname,itemdetails)
+        public LootItem(int id, string name, string pluralName, string itemDetails, int dropPercentage, bool isDefaultItem, Item details) : base(id, name, pluralName, itemDetails)
         {
-            DropPercentage = droppercentage;
-            IsDefaultItem = isdefaultitem;
+            DropPercentage = dropPercentage;
+            IsDefaultItem = isDefaultItem;
             Details = details;
         }
     }

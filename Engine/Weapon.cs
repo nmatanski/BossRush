@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapon:Item
+    public class Weapon : Item
     {
-        public int minDmg { get; set; }
-        public int maxDmg { get; set; }
+        public int MinDmg { get; set; }
 
-        public Weapon(int id,string name,string pluralname,int mindmg,int maxdmg):base(id,name,pluralname)
-        { 
-            minDmg = mindmg;
-            maxDmg = maxdmg;
-            
+        public int MaxDmg { get; set; }
 
+        public Weapon(int id, string name, string pluralName, string itemDetails, int minDmg, int maxDmg) : base(id, name, pluralName, itemDetails)
+        {
+            MinDmg = minDmg;
+            MaxDmg = maxDmg;
         }
     }
 }

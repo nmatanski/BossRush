@@ -28,22 +28,22 @@ namespace Engine
         public const int ENEMY_ID_TYPE_THREE = 2004;
 
 
-      static World()
+        static World()
         {
             PopulateItems();
-        PopulateEnemies();
+            PopulateEnemies();
         }
 
-       private static void PopulateItems()
-            {
-            Items.Add(new Weapon(ITEM_ID_BROKEN_SWORD,"Broken sword","Broken swords",0,5));
-            Items.Add(new Weapon(ITEM_ID_WOODEN_SWORD, "Wooden sword", "Wooden swords", 3, 9));
+        private static void PopulateItems()
+        {
+            Items.Add(new Weapon(ITEM_ID_BROKEN_SWORD, "Broken sword", "Broken swords", "add descr here", 0, 5)); // TODO
+            Items.Add(new Weapon(ITEM_ID_WOODEN_SWORD, "Wooden sword", "Wooden swords", "add descr here", 3, 9)); // TODO
             Items.Add(new HealingItem(ITEM_ID_BANANA, "Banana", "Bananas", "Heals 35 HP", 35));
         }
 
         private static void PopulateEnemies()
         {
-            Enemies.Add(new Enemy(ENEMY_ID_CACTI, "Cacti", 1000, 1000,));
+            // Enemies.Add(new Enemy(ENEMY_ID_CACTI, "Cacti", 1000, 1000,)); // TODO: id, name, maxHP, currentHP, minDmg, maxDmg, rewardGold, rewardXP
         }
     }
 }

@@ -13,19 +13,19 @@ namespace Engine
 
         public string Name { get; set; }
 
-        public int MaxHp { get; set; }
+        public int CurrentHP { get; set; }
 
-        public int CurHp { get; set; }
+        public int MaxHP { get; set; }
 
-        public int Mp { get; set; }
+        public int ManaPoints { get; set; }
 
 
-        public Creature (int id, string name, int maxHP, int currentHP)
+        public Creature(int id, string name, int maxHP, int currentHP)
         {
             Id = id;
             Name = name;
-            MaxHp = maxHP;
-            CurHp = currentHP;
+            MaxHP = maxHP;
+            CurrentHP = currentHP;
         }
 
 

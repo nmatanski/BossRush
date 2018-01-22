@@ -9,8 +9,11 @@ namespace Engine
     class InventoryItem
     {
         public Item Details { get; set; }
+
         public int Quantity { get; set; }
-        public string Description { get { return Quantity>1? Details.PluralName:Details.Name} }
+
+        public string Description { get { return Quantity > 1 ? Details.PluralName : Details.Name; } }
+
         public InventoryItem(Item details, int quantity)
         {
             Details = details;
