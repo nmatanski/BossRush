@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BossRush
+namespace Engine
 {
-    class Program
+    public class Enemy : Creature
     {
-        static void Main(string[] args)
+        public Enemy(int id, string name, int maxHP, int currentHP) : base(id, name, maxHP, currentHP)
         {
         }
     }
