@@ -8,8 +8,13 @@ namespace Engine
 {
     public class Player : Creature
     {
-        public Player(int id, string name, int maxHP, int currentHP) : base(id, name, maxHP, currentHP)
+        public int Gold { get; set; }
+        public Player(int id, string name, int maxHP, int currentHP,int gold) : base(id, name, maxHP, currentHP)
         {
+
+            Gold = gold;
         }
+
+       
     }
 }
