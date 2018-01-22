@@ -13,8 +13,6 @@ namespace BossRush
 {
     partial class Bot
     {
-        private string botToken;
-
         private Task Log(LogMessage arg)
         {
             Console.WriteLine(arg);
@@ -29,10 +27,9 @@ namespace BossRush
 
             services = new ServiceCollection().AddSingleton(client).AddSingleton(commands).BuildServiceProvider();
             client.Log += Log;
-            String botToken = "NDA0NjcyNTc2NjM2MzIxODAy.DUeLrA.Y883Cwi07JqniDcF1K-mdDoenno";
-
             await RegisterCommandsAsync();
 
+            string botToken = "NDA0NjcyNTc2NjM2MzIxODAy.DUeLrA.Y883Cwi07JqniDcF1K-mdDoenno";
             await client.LoginAsync(TokenType.Bot, botToken);
 
             await client.StartAsync();
